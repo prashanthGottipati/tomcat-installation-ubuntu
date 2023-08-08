@@ -15,11 +15,12 @@ sudo tar xvzf apache-tomcat-9.0.78.tar.gz
 sudo rm -rf apache*.tar.gz
 
 # Configuring Tomcat server for Manager, Host-manager and Credentials
-sudo cp context.xml /opt/tomcat/apache-tomcat-9.0.78/webapps/manager/META-INF/context.xml
-sudo cp context.xml /opt/tomcat/apache-tomcat-9.0.78/webapps/host-manager/META-INF/context.xml
-sudo cp tomcat-users.xml /opt/tomcat/apache-tomcat-9.0.78/conf/tomcat-users.xml
+cd -
+sudo cp ./context.xml /opt/tomcat/apache-tomcat-9.0.78/webapps/manager/META-INF/context.xml
+sudo cp ./context.xml /opt/tomcat/apache-tomcat-9.0.78/webapps/host-manager/META-INF/context.xml
+sudo cp ./tomcat-users.xml /opt/tomcat/apache-tomcat-9.0.78/conf/tomcat-users.xml
 # Configuring Tomcat as a Service
-sudo cp tomcat.service /etc/systemd/system/tomcat.service
+sudo cp ./tomcat.service /etc/systemd/system/tomcat.service
 
 sudo useradd -r -m -U -d /opt/tomcat -s /bin/false tomcat
 sudo chown -R tomcat: /opt/tomcat/*
