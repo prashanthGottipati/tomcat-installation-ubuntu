@@ -54,7 +54,12 @@
   <user username="role1" password="<must-be-changed>" roles="role1"/>
 -->
 <!--Comments-->
-<role rolename="admin-gui"/>
-<role rolename="manager-gui"/>
-<user username="admin" password="password" roles="admin-gui,manager-gui"/>
+<role rolename="manager"/>  
+<role rolename="manager-gui"/>  
+<role rolename="admin"/>  
+<role rolename="admin-gui"/>  
+<role rolename="manager-script"/>  
+<role rolename="manager-jmx"/>  
+<role rolename="manager-status"/>
+<user username="admin" password="password" roles="admin-gui,admin,manager-gui,manager,manager-script,manager-jmx,manager-status"/>
 </tomcat-users>
