@@ -13,7 +13,7 @@ sudo systemctl stop tomcat 2>/dev/null
 sudo rm -rf apache* tomcat*
 sudo mkdir -p /opt/tomcat
 sudo wget -q https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
-sudo tar xf apache-tomcat-9.0.68.tar.gz -C /opt/tomcat 1>/dev/null
+sudo tar -xf apache-tomcat-9.0.68.tar.gz -C /opt/tomcat 1>/dev/null
 sudo rm -rf apache-tomcat-9.0.68.tar.gz
 echo "            -> Done"
 
